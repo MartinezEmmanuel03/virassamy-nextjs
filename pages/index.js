@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../components/Layout'
@@ -14,6 +15,21 @@ import feedback from '../public/images/feedback.png'
 import mail from '../public/images/mail.png'
 
 export default function Home({ presentation, statistiques, exclusivites, avis }) {
+  const contactType = {
+    personne: "",
+    telephone: "",
+    email: "",
+    message: ""
+  }
+  const [contact, setContact] = useState({ contactType })
+
+  const handleContact = (place, value) => {
+    const newContact = { ...contact };
+    newContact[place] = value;
+    setContact(newContact);
+    console.log(contact)
+  };
+
   return (
     <>
       <Head>
@@ -131,11 +147,11 @@ export default function Home({ presentation, statistiques, exclusivites, avis })
             <form className='bg-lightbg mx-8 md:mx-12 mt-4 md:pt-12 lg:pt-16 py-8 rounded-xl text-center '>
               <div className='flex flex-col md:flex-row items-center md:mx-8 '>
                 <div className='flex flex-col md:h-40 md:justify-between items-center md:items-start w-full'>
-                  <input required type="text" placeholder="Nom" className='border border-peach w-3/4 md:w-4/5 mb-4 rounded-lg text-peach md:text-2xl pl-4' />
-                  <input required type="text" placeholder="Prénom" className='border border-peach w-3/4 md:w-4/5 mb-4 rounded-lg text-peach md:text-2xl pl-4' />
-                  <input required type="text" placeholder="Email" className='border border-peach w-3/4 md:w-4/5 mb-4 md:mb-0 rounded-lg text-peach md:text-2xl pl-4' />
+                  <input required type="text" placeholder="Nom et Prénom" name="personne" value={contact.personne} onChange={(e) => handleContact(e.target.name, e.target.value)} className='border border-peach w-3/4 md:w-4/5 mb-4 rounded-lg text-peach md:text-2xl pl-4' />
+                  <input required type="text" placeholder="Téléphone" name="telephone" value={contact.telephone} onChange={(e) => handleContact(e.target.name, e.target.value)} className='border border-peach w-3/4 md:w-4/5 mb-4 rounded-lg text-peach md:text-2xl pl-4' />
+                  <input required type="email" placeholder="Email" name="email" value={contact.email} onChange={(e) => handleContact(e.target.name, e.target.value)} className='border border-peach w-3/4 md:w-4/5 mb-4 md:mb-0 rounded-lg text-peach md:text-2xl pl-4' />
                 </div>
-                <textarea required type="text" row="5" placeholder="Message" className='border border-peach w-3/4 md:w-4/5 h-40 rounded-lg text-peach md:text-2xl pl-4' />
+                <textarea required type="text" row="5" placeholder="Message" name="message" value={contact.message} onChange={(e) => handleContact(e.target.name, e.target.value)} className='border border-peach w-3/4 md:w-4/5 h-40 rounded-lg text-peach md:text-2xl pl-4' />
               </div>
               <button type="submit" className='bg-peach text-white rounded-xl mt-12 py-2 px-4 text-xl'>Envoyer</button>
             </form>
