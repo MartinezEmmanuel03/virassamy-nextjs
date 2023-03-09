@@ -10,7 +10,7 @@ export default function Layout({ children }) {
   return (
     <>
       <div className='border-b border-text md:border-0'>
-        <Link href="/"><h1 className='text-6xl md:text-8xl lg:text-9xl font-title text-center mt-4 text-peach'>Marilyn Virassamy</h1></Link>
+        <Link href="/"><h1 className='text-4xl md:text-7xl lg:text-8xl lg:pt-4 font-title text-center my-4 text-peach'>Marilyn Virassamy</h1></Link>
         <p className='text-sm md:text-2xl lg:text-3xl font-text text-center mt-2 text-text mb-4'>Une histoire immobilière à écrire ensemble</p>
       </div>
       <main>{children}</main>

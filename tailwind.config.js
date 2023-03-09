@@ -15,7 +15,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        title: ['Corinthia'],
+        title: ['daniel'],
         text: ['Noto Sans'],
       },
     },
