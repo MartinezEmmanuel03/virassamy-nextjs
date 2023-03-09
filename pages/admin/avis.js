@@ -48,7 +48,7 @@ export default function Avis() {
           <form className="flex flex-col items-center mt-8 w-3/5 mx-auto" onSubmit={(e) => submitAvis(e)}>
             <input required type="text" name="personne" value={avis.personne} onChange={(e) => handleAvis(e.target.name, e.target.value)} placeholder="Nom et prénom de l'auteur de l'annonce" className="border border-text rounded-lg pl-4 text-xl w-full" />
             <select defaultValue={0} name="etoiles" value={avis.etoiles} onChange={(e) => handleAvis(e.target.name, e.target.value)} className="w-2/3 mx-auto border border-text rounded-lg pl-2 text-xl my-8">
-              <option value={0}>Nombre d'étoiles</option>
+              <option value={0}>Etoiles</option>
               <option value={1}>1</option>
               <option value={2}>2</option>
               <option value={3}>3</option>
