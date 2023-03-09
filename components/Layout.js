@@ -34,7 +34,7 @@ export default function Layout({ children }) {
               src={insta}
               alt="icone instagram"
             />
-            <a href="https://www.linkedin.com/in/marilyn-virassamy-975422110/" target="_blank"><Image
+            <a href="https://www.linkedin.com/in/marilyn-virassamy-975422110/" target="_blank" rel="noreferrer"><Image
               className='h-6 w-6 md:h-10 md:w-10 lg:h-14 lg:w-14'
               src={linkedin}
               alt="icone linkedin"

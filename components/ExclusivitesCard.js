@@ -8,7 +8,7 @@ export default function ExclusivitesCard({ exclusivite }) {
   return (
     <div className="mt-8 w-4/5 mx-auto mb-12 hover:scale-110 duration-200">
       <div className=" border border-peach hover:border-2 mx-auto bg-white rounded-xl">
-        <a href={exclusivite.lienAnnonce} target="_blank">
+        <a href={exclusivite.lienAnnonce} target="_blank" rel="noreferrer">
           <div>
             <img alt="photo du bien exclusif" src={exclusivite.imageurl} className="rounded-t-xl h-40 w-full" />
             <div>

@@ -44,7 +44,7 @@ export default class Responsive extends Component {
     return (
       <div className="w-11/12 mx-auto">
         <Slider {...settings}>
-          {this.props.exclusivites.map((exclusivite) => (<div><ExclusivitesCard exclusivite={exclusivite} /></div>))}
+          {this.props.exclusivites.map((exclusivite) => (<div><ExclusivitesCard key={exclusivite.id} exclusivite={exclusivite} /></div>))}
         </Slider>
       </div>
     );
