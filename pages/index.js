@@ -137,7 +137,7 @@ export default function Home({ presentation, statistiques, exclusivites, avis })
               alt="bordure top"
             />
             <div className='bg-darkbg m-0 pt-8'>
-              <h2 className='text-peach font-title text-5xl md:text-7xl text-center'>Exclusivités</h2>
+              <h2 className='text-peach font-title text-4xl md:text-7xl text-center'>Exclusivités</h2>
               <div>
                 <Responsive exclusivites={exclusivites} />
               </div>
@@ -151,7 +151,7 @@ export default function Home({ presentation, statistiques, exclusivites, avis })
           </div>
           {/* partie Avis */}
           <div className='pt-8'>
-            <h2 className='text-peach font-title text-5xl md:text-7xl text-center'>Avis</h2>
+            <h2 className='text-peach font-title text-4xl md:text-7xl text-center'>Avis</h2>
             <Responsive2 avis={avis} />
           </div>
           {/* partie valorisation */}
@@ -163,7 +163,7 @@ export default function Home({ presentation, statistiques, exclusivites, avis })
               alt="bordure top"
             />
             <div className='bg-darkbg m-0 pt-8 pb-40'>
-              <h2 className='text-peach font-title text-5xl md:text-7xl text-center'>Valorisation</h2>
+              <h2 className='text-peach font-title text-4xl md:text-7xl text-center'>Valorisation</h2>
             </div>
             <Image
               className='mt-0 p-0 bg-darkbg'
@@ -174,7 +174,7 @@ export default function Home({ presentation, statistiques, exclusivites, avis })
           </div>
           {/* partie contact */}
           <div id='contact' className='py-8'>
-            <h2 className='text-peach font-title text-5xl md:text-7xl text-center'>Contact</h2>
+            <h2 className='text-peach font-title text-4xl md:text-7xl text-center'>Contact</h2>
             <form
               className='bg-lightbg mx-8 md:mx-12 mt-4 md:pt-12 lg:pt-16 py-8 rounded-xl text-center'
               onSubmit={(e) => submitContact(e)}

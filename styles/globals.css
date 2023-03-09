@@ -8,3 +8,24 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+@layer base {
+  @font-face {
+    font-family: "Thesignature";
+    src: url('../public/fonts/Thesignature.ttf') format('truetype');
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: "Salonica";
+    src: url('../public/fonts/Salonica.ttf') format('truetype');
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: "daniel";
+    src: url('../public/fonts/daniel.ttf') format('truetype');
+  }
+}
