@@ -7,13 +7,13 @@ export default function AvisCard({ avis }) {
   const highestRate = ["⭐", "⭐", "⭐", "⭐", "⭐"];
   const personRate = highestRate.slice(5 - rate);
   return (
-    <div className="mt-8 w-4/5 mx-auto hover:scale-110 duration-200 bg-grey rounded-lg p-2 mb-12">
+    <div className="avisCard mt-8 w-4/5 mx-auto hover:scale-110 duration-200 bg-grey rounded-lg p-2 mb-12">
       <p className="text-text font-text font-bold">{avis.personne}</p>
       <div className="flex">
         {personRate.map((e, index) => (<p key={index}>{e}</p>))}
       </div>
       <p className={`{text-text font-text ${className}`}>{avis.texteAvis}</p>
-      <button type="button" className="text-peach hover:underline" onClick={() => setFullText(!fullText)}>{fullText === true ? "Read more" : "Read less"}</button>
+      {(avis.texteAvis.length > 150) ? <button type="button" className="text-peach hover:underline" onClick={() => setFullText(!fullText)}>{fullText === true ? "Voir plus" : "Voir moins"}</button> : ""}
     </div>
   )
 }

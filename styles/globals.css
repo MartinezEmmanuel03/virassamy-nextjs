@@ -9,6 +9,10 @@
   overflow: hidden;
 }
 
+.avisCard {
+  min-height: 208px;
+}
+
 @layer base {
   @font-face {
     font-family: "daniel";
