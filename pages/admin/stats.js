@@ -65,9 +65,9 @@ export default function Stats() {
               <input required type="text" name="annee1" value={statistiques.annee1} onChange={(e) => handleStatistiques(e.target.name, e.target.value)} className="border border-text rounded-lg text-text font-text text-4xl w-24 text-center" />
             </div>
             <div className="mt-16 flex justify-center">
-              <input required type="text" name="chiffre2" value={statistiques.chiffre2} className="border border-text rounded-lg text-text font-text text-4xl w-24 text-center" />
+              <input required type="text" name="chiffre2" value={statistiques.chiffre2} onChange={(e) => handleStatistiques(e.target.name, e.target.value)} className="border border-text rounded-lg text-text font-text text-4xl w-24 text-center" />
               <p className="mx-2 text-text font-text text-4xl">Ventes en</p>
-              <input required type="text" name="annee2" value={statistiques.annee2} className="border border-text rounded-lg text-text font-text text-4xl w-24 text-center" />
+              <input required type="text" name="annee2" value={statistiques.annee2} onChange={(e) => handleStatistiques(e.target.name, e.target.value)} className="border border-text rounded-lg text-text font-text text-4xl w-24 text-center" />
             </div>
             <button type="submit" onClick={(e) => submitStatistiques(e)} className="bg-text text-white text-xl border border-text hover:bg-white hover:text-text transition-colors duration-300 rounded-lg px-4 py-2 w-40 mt-16">Mettre à jour</button>
           </form>
