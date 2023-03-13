@@ -24,11 +24,11 @@ export default function Layout({ children }) {
         <div className='bg-darkbg m-0 pt-4 pb-20 md:pb-0'>
           <h2 className='text-peach font-title text-5xl md:text-7xl text-center hidden md:block'>Marilyn Virassamy</h2>
           <div className='flex justify-center md:mt-6'>
-            <Image
+            <a href="https://www.facebook.com/marilyn.weelodge" target="_blank" rel="noreferrer"><Image
               className='h-6 w-6 md:h-10 md:w-10 lg:h-14 lg:w-14'
               src={facebook}
               alt="icone facebook"
-            />
+            /></a>
             <Image
               className=' h-6 w-6 md:h-10 md:w-10 lg:h-14 lg:w-14 ml-12 mr-12'
               src={insta}
